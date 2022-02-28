@@ -29,12 +29,21 @@
         #single-drink {
             display: none;
         }
+        
+        .title {
+            font-size: 60px;
+        }
+        
+        #header {
+            margin-top: 10%
+        }
     </style>
 </head>
 
 <body class="bg-light">
-    <header class="container bg-secondary mb-5 py-5 px-5 rounded">
-        <h1 class="text-center fw-bolder mb-3 text-warning">Search Your <span class="text-danger">Drink</span></h1>
+    <header id="header" class="container bg-white mb-5 py-5 px-5 rounded">
+        <h1 class="text-center title fw-bolder mb-3 text-warning">Search Your <span class="text-danger">Drink</span>
+        </h1>
         <div class="input-group mb-3 border-5 p-5 bg-primary  rounded-3 ">
             <input id="inputField" type="text" class="form-control" placeholder="Search Your drink" aria-label="Recipient's username" aria-describedby="button-addon2">
             <button onclick="lodeData()" class="btn btn-outline-success bg-success text-white fw-bolder" type="button" id="button-addon2">Search</button>
@@ -45,14 +54,15 @@
 
         </div>
     </header>
-    <main id="main" class="container bg-secondary pb-5 px-5">
+    <main id="main" class="container bg-white pb-5 px-5">
         <section class=" h-100 w-100">
 
             <!----------- loading spinner --------------->
-            <div id="loading-spinner" class="text-center bg-secondary my-5 ">
-                <div class="spinner-border bg-secondary text-success fw-bolder fs-2 mb-5" style="width: 5rem; height: 5rem;" role="status">
-                    <span class="visually-hidden bg-secondary">Loading...</span>
+            <div id="loading-spinner" class="text-center bg-white my-5 ">
+                <div>
+                    <img height="100px" width="100px" src="./loader.gif" alt="">
                 </div>
+
             </div>
 
 

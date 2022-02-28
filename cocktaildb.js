@@ -51,6 +51,7 @@ const displayData = cocktails => {
     } else {
         //main
         error('none')
+        document.getElementById('header').style.marginTop = '0px'
         const container = document.getElementById('container')
         clearTextContent('container')
         cocktails.forEach(cocktail => {
@@ -101,7 +102,7 @@ const displaySingleDrink = drink => {
                 <div class="card-body">
                     <h5 class="card-title">${drink.strDrink}</h5>
                     <p class="card-text">${drink.strInstructions.slice(0,300)}</p>
-                    <a target="_blank" href=" ${drink.strVideo ? drink.strVideo:''} "class=" btn btn-primary">See Video</a>
+                    <a  href=" ${drink.strVideo ? drink.strVideo:''} "class=" btn btn-primary">See Video</a>
                 </div>
                 </div>
             </div>
