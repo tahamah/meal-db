@@ -33,41 +33,42 @@ function loadUsers() {
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then(data => displayUsers(data))
-        document.getElementById('user-container').innerHTML=""
+    document.getElementById('user-container').innerHTML = ""
 }
+
 function displayUsers(data) {
-    const userSection =document.getElementById('user-container')
-     for (const user of data) {
-         const div = document.createElement('div')
-         div.classList.add('section')
-         div.innerHTML=`
+    const userSection = document.getElementById('user-container')
+    for (const user of data) {
+        const div = document.createElement('div')
+        div.classList.add('section')
+        div.innerHTML = `
          <h3>Name: ${user.name} </h3>
          <p>Email: ${user.email} </p>
          `
-         userSection.appendChild(div)
-     }
- }
+        userSection.appendChild(div)
+    }
+}
 
 
 function loadPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
         .then(data => displayPosts(data))
-        document.getElementById('user-container').innerHTML= ''
+    document.getElementById('user-container').innerHTML = ''
 }
 
 function displayPosts(posts) {
-    const userSection =document.getElementById('user-container')
+    const userSection = document.getElementById('user-container')
     for (const post of posts) {
         const div = document.createElement('div')
         div.classList.add('section')
-        div.innerHTML=`
+        div.innerHTML = `
         <h3> ${post.title} </h3>
         <p> ${post.body} </p>
         `
         userSection.appendChild(div)
     }
-} 
+}
 
 
 
@@ -81,8 +82,3 @@ delete  -d
 get vs post
 crud vs 
 */
-
-
-
-
-

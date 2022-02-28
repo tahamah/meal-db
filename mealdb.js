@@ -20,7 +20,6 @@ const searchFood = async() => {
         alert('Something Wrong Please Try agin later')
         return
     }
-
     /*  fetch(url)
          .then(res => res.json())
          .then(data => displaySearchResult(data.meals)) */
@@ -41,6 +40,7 @@ const displaySearchResult = meals => {
     }
 
     meals.forEach(meal => {
+        console.log(meal);
         const div = document.createElement('div')
         div.classList.add('col')
         div.innerHTML = `
